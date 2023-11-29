@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    public float spd = 5.0f;
+    public float spd = 10.0f;
     float h;
     float v;
     private Rigidbody2D rb;
@@ -25,8 +25,8 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
